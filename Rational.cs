@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Incapsulation.RationalNumbers
 {
@@ -39,8 +35,9 @@ namespace Incapsulation.RationalNumbers
             get { return denominator; }
             set
             {
-                if (value < 0)
-                    numerator *= -1;
+                // only numerator may have below zero value
+                if (value < 0) 
+                    numerator *= -1; 
                 denominator = Math.Abs(value);                    
             }
         }
